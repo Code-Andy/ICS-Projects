@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDoc, addDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,7 +25,7 @@ const db = getFirestore();
 const colRef = collection(db, "books");
 
 // get collection data
-getDoc(colRef)
+getDocs(colRef)
   .then((snapshot) => {
     // console.log(snapshot.docs)
     let books = [];
@@ -40,14 +40,33 @@ getDoc(colRef)
 
 const addValues = document.querySelector(".add");
 
-addValues.addEventListener("submit", (e) => {
+document.getElementById("add").addEventListener("submit", submitForm);
+
+function submitForm(e) {
   e.preventDefault();
-  await addDoc(colRef, {
-    val1: addValues.val1.number,
-    val2: addValues.val2.number,
-    val3: addValues.val3.number,
-    val4: addValues.val4.number,
-  }).then(() => {
-    addValues.reset();
+  var value1 = getFormValues("val1");
+  var value2 = getFormValues("val2");
+  var value3 = getFormValues("val3");
+  var value4 = getFormValues("val4");
+  console.log(value1, value2, value3, value4);
+  addDoc(colRef, {
+    val1: value1,
+    val2: value2,
+    val3: value3,
+    val4: value4,
   });
-});
+
+  // .then(() => {
+  //   addValues.reset();
+  // });
+}
+
+function getFormValues(id) {
+  return document.getElementById(id).value;
+}
+
+// addValues.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log(addValues.val1.data);
+
+// });
