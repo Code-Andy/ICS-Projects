@@ -1,8 +1,23 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 canvas {
   display: block;
+}
+
+.container input {
+  min-height: 25px;
+  display: inline-block;
+  width: 50px;
+  margin: 5px;
+}
+
+.container button {
+  min-height: 25px;
+  display: inline-block;
+  width: 50px;
+  margin: 5px;
 }
