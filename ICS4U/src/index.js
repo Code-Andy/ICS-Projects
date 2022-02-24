@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDoc } from "firebase/firestore";
+import { getFirestore, collection, getDoc, addDoc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -16,16 +16,16 @@ const firebaseConfig = {
   appId: "1:266594375880:web:07db376ec0107afe882dfd",
   measurementId: "G-9VP86KXK57",
 };
-// Initialize Firebase
+
 initializeApp(firebaseConfig);
+
 const db = getFirestore();
 
-import {} from "firebase/firestore";
-
+// collection ref
 const colRef = collection(db, "books");
 
 // get collection data
-getDocs(colRef)
+getDoc(colRef)
   .then((snapshot) => {
     // console.log(snapshot.docs)
     let books = [];
@@ -37,3 +37,17 @@ getDocs(colRef)
   .catch((err) => {
     console.log(err.message);
   });
+
+const addValues = document.querySelector(".add");
+
+addValues.addEventListener("submit", (e) => {
+  e.preventDefault();
+  await addDoc(colRef, {
+    val1: addValues.val1.number,
+    val2: addValues.val2.number,
+    val3: addValues.val3.number,
+    val4: addValues.val4.number,
+  }).then(() => {
+    addValues.reset();
+  });
+});
