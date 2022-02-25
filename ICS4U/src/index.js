@@ -17,56 +17,73 @@ const firebaseConfig = {
   measurementId: "G-9VP86KXK57",
 };
 
+// starts the firebase webapp
 initializeApp(firebaseConfig);
 
+// starts the firestore database
 const db = getFirestore();
 
 // collection ref
-const colRef = collection(db, "books");
+const colRef = collection(db, "values");
 
-// get collection data
+window.x = []; //need to use dictionary
+window.y = [];
+
+//function to pull data out of the ref and add it into local server variables
 getDocs(colRef)
   .then((snapshot) => {
-    // console.log(snapshot.docs)
-    let books = [];
+    let values = [];
     snapshot.docs.forEach((doc) => {
-      books.push({ ...doc.data(), id: doc.id });
+      values.push(doc.data());
     });
-    console.log(books);
+    //push all elements (firebase dict) into a new array
+    for (let x = 0; x < Object.keys(values).length; x++) {
+      window.x.push(values[x].val1);
+      window.y.push(values[x].val2);
+    }
   })
   .catch((err) => {
     console.log(err.message);
   });
 
-const addValues = document.querySelector(".add");
-
+//listener for button press
 document.getElementById("add").addEventListener("submit", submitForm);
 
+//takes form data and adds it to firebase and website array
 function submitForm(e) {
   e.preventDefault();
-  var value1 = getFormValues("val1");
-  var value2 = getFormValues("val2");
-  var value3 = getFormValues("val3");
-  var value4 = getFormValues("val4");
-  console.log(value1, value2, value3, value4);
+  window.x.push(shortAlgo(getFormValues("val1")));
+  window.y.push(shortAlgo(getFormValues("val2")));
   addDoc(colRef, {
-    val1: value1,
-    val2: value2,
-    val3: value3,
-    val4: value4,
+    val1: shortAlgo(getFormValues("val1")),
+    val2: shortAlgo(getFormValues("val2")),
   });
-
-  // .then(() => {
-  //   addValues.reset();
-  // });
+  document.getElementById("add").reset();
 }
 
+// converts simple -10 - 10 input and maps it to 0 - 400
+function shortAlgo(factor) {
+  let coordinate = (10 + Number(factor)) * 20;
+  return coordinate;
+}
+
+// gets values from documents within 'add'
 function getFormValues(id) {
   return document.getElementById(id).value;
 }
 
-// addValues.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   console.log(addValues.val1.data);
+//REFERENCE getDocs. delete whenever
 
-// });
+// Get data from firestore with id value
+// getDocs(colRef)
+//   .then((snapshot) => {
+//     // console.log(snapshot.docs)
+//     let values = [];
+//     snapshot.docs.forEach((doc) => {
+//       values.push({ ...doc.data(), id: doc.id });
+//     });
+//     console.log(values);
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });

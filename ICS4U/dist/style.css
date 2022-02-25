@@ -11,13 +11,6 @@ canvas {
 .container input {
   min-height: 25px;
   display: inline-block;
-  width: 50px;
-  margin: 5px;
-}
-
-.container button {
-  min-height: 25px;
-  display: inline-block;
-  width: 50px;
+  width: 60px;
   margin: 5px;
 }
