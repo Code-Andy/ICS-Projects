@@ -7,6 +7,7 @@ function setup() {
 function draw() {
   background(235);
   stroke(1);
+  fill(0);
   rect(199, 0, 2, 400);
   rect(0, 199, 400, 2);
   for (let x = 0; x < Object.keys(window.x).length; x++) {
