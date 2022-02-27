@@ -5,7 +5,13 @@
 
 // Import functions from Google's Firebase
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+  documentId,
+} from "firebase/firestore";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -103,12 +109,12 @@ getDocs(colRef)
 document.getElementById("add").addEventListener("submit", submitForm); // Listener for when form is submitted
 
 // Takes form data and adds it to firebase and website array
-function submitForm(document) {
+function submitForm(e) {
   /**
    * Takes data from HTML forms and saves it to firestore and local variables
    * @param {event} e - Event handler so we can delay form reset until values are submitted
    */
-  document.preventDefault();
+  e.preventDefault();
   window.x.push(shortAlgo(getFormValues("val1")));
   window.y.push(shortAlgo(getFormValues("val2")));
   addDoc(colRef, {
