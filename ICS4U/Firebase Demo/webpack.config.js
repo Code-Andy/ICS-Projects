@@ -8,5 +8,5 @@ module.exports = {
     filename: "bundle.js",
   },
   watch: true,
-  devtool: "eval-source-map", //RUN npm run build to include this for laptop code
+  devtool: "eval-source-map", //Run -npm run build to construct the website, keep terminal open to apply saves
 };
