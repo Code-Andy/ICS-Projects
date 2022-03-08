@@ -11,10 +11,9 @@ If you ran extractEvenlyDivisible([1,9,3,4,3,6,7,8,9], 3) you would get a return
 
 a = [1, 9, 3, 4, 3, 6, 7, 8, 9]
 
-
+'''
 def extractEvenlyDivisible(array, divisor):
     b = set()
-
     def helper(arr):
         if(len(arr) == 0):
             return
@@ -27,6 +26,19 @@ def extractEvenlyDivisible(array, divisor):
             return helper(arr)
     helper(array)
     return sorted(b)
+'''
+
+
+def extractEvenlyDivisible(array, divisor):
+    def helper(arr, index):
+        if(len(arr) == index + 1):
+            return arr
+        elif ((arr[index] % divisor) == 0):
+            return helper(arr, index + 1)
+        else:
+            arr.pop(index)
+            return helper(arr, index)
+    return sorted(set(helper(array, 0)))
 
 
 print(extractEvenlyDivisible(a, 3))
