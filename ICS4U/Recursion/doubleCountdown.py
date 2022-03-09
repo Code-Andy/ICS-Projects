@@ -12,7 +12,7 @@ doubleCountdown(5)
 
 def recursiveCountdown(value):
     def helper(n, val):
-        if n == 0 and val == 1:
+        if n <= 0 and val == 1:
             print(0)
             return
         if n == 0 and val == 0:
@@ -22,4 +22,4 @@ def recursiveCountdown(value):
     helper(value, 0)
 
 
-recursiveCountdown(5)
+recursiveCountdown(0)
