@@ -9,7 +9,7 @@ If you ran extractEvenlyDivisible([1,2,3,4,5,6,7,8,9], 3) you would get a return
 If you ran extractEvenlyDivisible([1,9,3,4,3,6,7,8,9], 3) you would get a return value of [3,6,9].
 """
 
-a = [1, 9, 3, 4, 3, 6, 7, 8, 9]
+a = [1, 9, 3, 4, 3, 6, 7, 8, 9, 5, 6, 3, 12, 24, 66, 33]
 
 
 def extractEvenlyDivisible(array, divisor):

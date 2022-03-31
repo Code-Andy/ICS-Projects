@@ -22,4 +22,4 @@ def recursiveCountdown(value):
     helper(value, 0)
 
 
-recursiveCountdown(0)
+recursiveCountdown(6)

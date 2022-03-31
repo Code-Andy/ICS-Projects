@@ -1,0 +1,23 @@
+{
+  "r1": {
+    "studentEmail": "708756@pdsb.net",
+    "school": "JFSS",
+    "factors": [4, 5, 6, 6],
+    "name": "Andy",
+    "grade": 12
+  },
+  "r2": {
+    "studentEmail": "213123@pdsb.net",
+    "school": "CPSS",
+    "factors": [3, 5, 5, 6],
+    "name": "Andy",
+    "grade": 12
+  },
+  "r3": {
+    "studentEmail": "17728293@uw.net",
+    "school": "Waterloo",
+    "factors": [0, 100, 100, 100],
+    "name": "Andy",
+    "grade": 12
+  }
+}
