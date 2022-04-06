@@ -1,6 +1,21 @@
-from region import Region
+import json
+from urllib import response
+from studentData import StudentData
 
-response1 = Region("708756@pdsb.net", "JFSS", [4, 2, 3, 2], "Andy", 12)
 
-response1.test()
-response1.returnFactors()
+with open('data.json') as f:
+    data = dict(json.load(f))
+    # print(data)
+
+
+response = []
+
+
+def importJson():
+    for items in data.values():
+        response.append(StudentData(
+            items))
+
+
+importJson()
+print(response[1].returnFactors())
