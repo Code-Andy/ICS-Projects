@@ -1,21 +1,23 @@
 import json
-from urllib import response
 from studentData import StudentData
+from employerData import EmployerData
 
 
 with open('data.json') as f:
     data = dict(json.load(f))
     # print(data)
 
-
-response = []
+jfssData = []
+microhardData = []
 
 
 def importJson():
     for items in data.values():
-        response.append(StudentData(
-            items))
+        if items["tag"] == "student":
+            jfssData.append(StudentData(items))
+        else:
+            microhardData.append(EmployerData(items))
 
 
 importJson()
-print(response[1].returnFactors())
+microhardData[1].userTrait()

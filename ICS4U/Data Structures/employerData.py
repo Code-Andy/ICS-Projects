@@ -8,5 +8,4 @@ class EmployerData(UserResponse):
         super().__init__(dict["factors"], dict["name"])
 
     def test(self):
-        print(self.studentEmail, self.school,
-              self.factors, self.name, self.grade)
+        print(self.employerId, self.department, self.factors, self.name)

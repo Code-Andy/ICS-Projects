@@ -2,23 +2,39 @@
   "r1": {
     "tag": "student",
     "studentEmail": "708756@pdsb.net",
-    "school": "JFSS",
+    "homeroomDep": "english",
     "factors": [4, 5, 6, 6],
     "name": "Andy",
     "grade": 12
   },
   "r2": {
+    "tag": "student",
     "studentEmail": "213123@pdsb.net",
-    "school": "CPSS",
+    "homeroomDep": "math",
     "factors": [3, 5, 5, 6],
     "name": "Andy",
     "grade": 12
   },
   "r3": {
-    "studentEmail": "17728293@uw.net",
-    "school": "Waterloo",
-    "factors": [0, 100, 100, 100],
+    "tag": "student",
+    "studentEmail": "346623@pdsb.net",
+    "homeroomDep": "science",
+    "factors": [0, 55, 76, 57],
     "name": "Andy",
     "grade": 12
+  },
+  "r4": {
+    "tag": "employee",
+    "employerId": 12346312,
+    "department": "Maintenance",
+    "factors": [0, 22, 43, 32],
+    "name": "Andy"
+  },
+  "r5": {
+    "tag": "employee",
+    "employerId": 12443645,
+    "department": "Management",
+    "factors": [0, 12, 31, 64],
+    "name": "Andy"
   }
 }
