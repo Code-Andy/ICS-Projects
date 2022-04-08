@@ -36,5 +36,12 @@
     "department": "Management",
     "factors": [0, 12, 31, 64],
     "name": "Andy"
+  },
+  "r6": {
+    "tag": "employee",
+    "employerId": 123123123123,
+    "department": "ape",
+    "factors": [0, 12, 31, 64],
+    "name": "Andy"
   }
 }

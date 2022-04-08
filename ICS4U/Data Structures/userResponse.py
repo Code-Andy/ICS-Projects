@@ -15,24 +15,24 @@ class UserResponse():
 
     def userTrait(self):
 
-        # 0-15 low, 15-35 is normal, 35<= is high
-        # fix
         maxFactor = max(self.factors)
         minFactor = min(self.factors)
 
+        traitList = ["stress", "depression", "anxiety", "pressimism"]
+
         if maxFactor <= 15:
             maxCon = "low"
-        elif maxFactor > 15 or maxFactor <= 35:
+        elif maxFactor > 15 and maxFactor <= 35:
             maxCon = "normal"
         elif maxFactor > 35:
             maxCon = "high"
 
         if minFactor <= 15:
             minCon = "low"
-        elif minFactor > 15 or maxFactor <= 35:
+        elif minFactor > 15 and maxFactor <= 35:
             minCon = "normal"
         elif minFactor > 35:
             minCon = "high"
 
         print(
-            f"User: {self.name} has {maxCon} amounts of {maxFactor} and {minCon} amounts of {minFactor}")
+            f"User: {self.name} has {maxCon} amounts of {traitList[self.factors.index(maxFactor)]} and {minCon} amounts of {traitList[self.factors.index(minFactor)]}")
