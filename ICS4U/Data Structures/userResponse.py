@@ -1,9 +1,22 @@
 class UserResponse():
-    """Parent class of mock user responses for summative project
+    """
+    Parent class of mock user responses for summative project
+    Attr:
+        factors (list) : Mental Health Factors
+        name (string) : Name
+
+    Methods:
+        returnAll() -> str
+            Returns user infomation
+        sumOfFactors() -> str
+            Returns sum of all factors
+        userTrait() -> str
+            Returns string containing user's best and worst factors
     """
 
     def __init__(self, factors, name):
-        """Initializes the class with given parameters stored as self variables
+        """
+        Initializes the class with given parameters stored as self variables
 
         Args:
             factors (list): List containing 4 mental health factors gauged by our survey
@@ -13,7 +26,8 @@ class UserResponse():
         self.name = name
 
     def returnAll(self):
-        """Returns user infomation as multiline string
+        """
+        Returns user infomation as multiline string
         """
         outputString = []
         outputString.append(f"User: {self.name} has a ")
@@ -25,7 +39,8 @@ class UserResponse():
         return(outputString)
 
     def sumOfFactors(self):
-        """Returns sum of all factors
+        """
+        Returns sum of all factors
         """
         sum = 0
         for values in self.factors:
@@ -34,7 +49,8 @@ class UserResponse():
         return(sum)
 
     def userTrait(self):
-        """Returns string containing user's best and worst factors
+        """
+        Returns string containing user's best and worst factors
         """
 
         maxFactor = max(self.factors)
