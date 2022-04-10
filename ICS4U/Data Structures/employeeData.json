@@ -1,0 +1,23 @@
+{
+  "r4": {
+    "tag": "employee",
+    "employerId": 12346312,
+    "department": "Maintenance",
+    "factors": [23, 11, 42, 54],
+    "name": "Jack"
+  },
+  "r5": {
+    "tag": "employee",
+    "employerId": 12443645,
+    "department": "Management",
+    "factors": [57, 32, 54, 12],
+    "name": "Bob"
+  },
+  "r6": {
+    "tag": "employee",
+    "employerId": 123123123123,
+    "department": "Hardware",
+    "factors": [51, 14, 17, 57],
+    "name": "Bill"
+  }
+}
