@@ -1,3 +1,11 @@
+# -----------------------------------------------------------------------------
+# Name:        Data Structures Assignment
+# Purpose:     To learn & implement objects, extending objects concepts, file IO, and formal documentation
+#
+# Author:      Andy Zhang
+# Created:     -----------
+# Updated:     10-Apr-2022
+# -----------------------------------------------------------------------------
 import json
 from studentData import StudentData
 from employeeData import EmployerData
