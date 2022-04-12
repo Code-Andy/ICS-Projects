@@ -1,0 +1,8 @@
+Student: Richard with email address: 213123@pdsb.net is from a Science homeroom
+User: Richard has a 
+Stress factor is: 15
+Depression factor is: 32
+Anxiety factor is: 35
+Pessimism factor is: 23
+Employee Bill with id: None is from Hardware
+User: Bill has high amounts of pessimism and low amounts of depression

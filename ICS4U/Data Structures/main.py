@@ -1,39 +1,76 @@
+# -----------------------------------------------------------------------------
+# Name:        Data Structures Assignment
+# Purpose:     To learn & implement objects, extending objects concepts, file IO, and formal documentation
+#
+# Author:      Andy Zhang
+# Created:     -----------
+# Updated:     10-Apr-2022
+# -----------------------------------------------------------------------------
 import json
 from studentData import StudentData
-from employerData import EmployerData
+from employeeData import EmployerData
 
-with open('data.json') as f:
-    data = dict(json.load(f))
-    # print(data)
+'''
+Future To Do's
+
+Use the class structure to implement searching algorithms for userresponse data
+Find common patterns such as stress in departments etc.
+This is for algorithms
+
+'''
+
+open('output.txt', 'w').close()
+
+
+def writeToTxt(outputString):
+    """Output data to txt file
+
+    Args:
+        outputString (string): Takes in return strings from the object list's functions and saves them in a txt file
+    """
+    with open('output.txt', 'a') as f:
+        f.write(outputString)
+        f.write("\n")
+
+
+with open('studentData.json') as f:
+    studentData = json.load(f)
+
+with open('employeeData.json') as f:
+    employeeData = json.load(f)
 
 jfssData = []
-microhardData = []
+microSoftData = []
 
 jfssReq = {
     "department": ["math", "science", "english", "music", "arts", "technology", "physed"],
     "maxDigits": 7,
-    "domain": "@pdsb.net"
+    "domain": "pdsb.net"
 }
 
 
-microhardReq = {
+microSoftReq = {
     "department": ["management", "hardware", "software", "maintenance"],
     "maxDigits": 8
 }
 
+for items in studentData.values():
+    jfssData.append(StudentData(items, jfssReq))
 
-def importJson():
-    for items in data.values():
-        if items["tag"] == "student":
-            jfssData.append(StudentData(items, jfssReq))
-        else:
-            microhardData.append(EmployerData(items, microhardReq))
+for items in employeeData.values():
+    microSoftData.append(EmployerData(items, microSoftReq))
 
 
-importJson()
-microhardData[1].test()
+print(jfssData[1].studentInfo())
+print(jfssData[1].sumOfFactors())
+print(jfssData[1].returnAll())
+jfssData[1].changeHomeroom('science')
+writeToTxt(jfssData[1].studentInfo())
+writeToTxt(jfssData[1].userTrait())
 
-
-newmicrohardData = microhardData[1].removeEmployee(microhardData)
-
-newmicrohardData[1].test()
+print(microSoftData[2].employeeInfo())
+print(microSoftData[2].sumOfFactors())
+print(microSoftData[2].returnAll())
+microSoftData[1].changeDepartment('software')
+writeToTxt(microSoftData[2].employeeInfo())
+writeToTxt(microSoftData[2].userTrait())
