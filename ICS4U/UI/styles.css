@@ -6,18 +6,23 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 #wrapper {
   position: absolute;
   height: 100%;
   width: 100%;
-  border: 2px dashed #f69c55;
+  /* border: 2px dashed #f69c55; */
+  display: flex;
+  flex-direction: row;
 }
 
 #start {
   margin: auto;
-  position: absolute;
   line-height: normal;
-  border: 2px dashed #f69c55;
+  /* border: 2px dashed #f69c55; */
 }
 
 h1 {
