@@ -7,8 +7,8 @@ function clickToLogin() {
   document.getElementById("welcome").style.fontSize = 35 + "px";
   document.getElementById("welcome").style.fontStyle = "normal";
   document.getElementById("welcome").style.fontWeight = 300;
-  document.getElementById("logo").style.display = "flex";
-  document.getElementById("logo").animate(
+  document.getElementById("googleLogo").style.display = "flex";
+  document.getElementById("googleLogo").animate(
     [
       // keyframes
       { opacity: 0 },

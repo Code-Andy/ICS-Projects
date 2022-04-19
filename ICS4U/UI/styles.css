@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -20,7 +18,7 @@ html {
   flex-direction: column;
 }
 
-#logo {
+#googleLogo {
   display: none;
   /* border: 2px dashed #f69c55; */
   justify-content: center;
@@ -46,45 +44,47 @@ html {
   font-weight: 600;
   font-size: 130px;
   text-align: center;
-  animation: fadein 2s;
+  animation: fadein 1.5s;
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
   position: absolute;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
   font-family: "Source Sans Pro";
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+.topnav div {
+  width: auto;
+  height: 40px;
+  margin: 10px;
+}
+
+#ourProject {
+  margin-left: auto;
+}
+
+.topnav div:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
+.topnav div.active {
   background-color: #04aa6d;
   color: white;
 }
 
-#dotLogo {
-  max-height: 50px;
-  justify-content: center;
-}
-
 img {
-  max-height: 100%;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes fadein {
