@@ -27,16 +27,23 @@ function clickToLogin() {
   fadeElement("welcome");
 }
 
+let activePage = "homePage";
+let lastActive = "";
+
 document.getElementById("ourProject").addEventListener("click", aboutPage);
 
-let aboutActive = false;
+document.getElementById("dotLogo").addEventListener("click", homePage);
 
 function aboutPage() {
   document.getElementById("aboutPage").style.display = "flex";
   document.getElementById("homePage").style.display = "none";
-  aboutActive = true;
+  lastActive = activePage;
+  activePage = "aboutPage";
 }
 
-window.addEventListener("popstate", function (event) {
-  //Your code here
-});
+function homePage() {
+  document.getElementById("aboutPage").style.display = "none";
+  document.getElementById("homePage").style.display = "flex";
+  lastActive = activePage;
+  activePage = "homePage";
+}

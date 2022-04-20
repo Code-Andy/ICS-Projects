@@ -37,6 +37,10 @@ html {
   /* border: 2px dashed #f69c55; */
 }
 
+#startContainer:hover {
+  cursor: crosshair;
+}
+
 #welcome {
   color: #ffffff;
   font-family: "Source Sans Pro";
@@ -75,8 +79,23 @@ html {
   margin-right: 20%;
 }
 
-#startContainer:hover {
-  cursor: crosshair;
+#questionPage {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 2.6vh;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* border: 2px dashed #f69c55; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#questionPage div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .topnav {
@@ -87,7 +106,7 @@ html {
   width: 100%;
 }
 
-.topnav a {
+.topnav p {
   color: #ffe3df;
   text-align: center;
   text-decoration: none;
@@ -101,17 +120,22 @@ html {
   margin-right: 2.5vh;
 }
 
-#ourProject a {
+#ourProject p {
   transition: all 0.2s ease 0s;
 }
 
-#ourProject a:hover {
+#ourProject p:hover {
   color: #3a3a3a;
 }
 
 #dotLogo {
   height: 4vh;
   margin-left: 2.5vh;
+  transition: all 0.2s ease 0s;
+}
+
+#dotLogo:hover {
+  filter: hue-rotate(90deg);
 }
 
 img {
