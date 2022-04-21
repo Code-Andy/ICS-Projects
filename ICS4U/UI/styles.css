@@ -26,7 +26,7 @@ html {
   max-width: 10%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 15px;
+  margin-bottom: 1.3vh;
 }
 
 #startContainer {
@@ -92,10 +92,25 @@ html {
   flex-direction: column;
 }
 
-#questionPage div {
+#qWrapper {
+  height: fit-content;
+  width: 60vw;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#qWrapper div {
+  display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+#qWrapper h1 {
+  text-align: center;
+  padding-bottom: 3vh;
 }
 
 .topnav {
@@ -117,7 +132,7 @@ html {
 
 #ourProject {
   margin-left: auto;
-  margin-right: 2.5vh;
+  margin-right: 1.1vw;
 }
 
 #ourProject p {
@@ -130,7 +145,8 @@ html {
 
 #dotLogo {
   height: 4vh;
-  margin-left: 2.5vh;
+  width: auto;
+  margin-left: 1.1vw;
   transition: all 0.2s ease 0s;
 }
 
@@ -141,6 +157,7 @@ html {
 img {
   height: 100%;
   width: 100%;
+  transform: translateZ(1px);
 }
 
 @keyframes fadein {
