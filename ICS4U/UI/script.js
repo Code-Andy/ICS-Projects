@@ -1,3 +1,5 @@
+//npm to setup webpack firebase and tiltjs
+
 document
   .getElementById("startContainer")
   .addEventListener("click", clickToLogin);
@@ -47,3 +49,8 @@ function homePage() {
   lastActive = activePage;
   activePage = "homePage";
 }
+
+VanillaTilt.init(document.getElementById("questionPage"), {
+  max: 25,
+  speed: 400,
+});
