@@ -92,14 +92,39 @@ html {
   flex-direction: column;
 }
 
+#hoverContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#hoverBox {
+  height: 50vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#hoverBox:nth-child(1) ~ #no {
+}
+
+#tiltWrapper {
+  height: 50vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 #qWrapper {
   height: fit-content;
   width: 60vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 #qWrapper div {

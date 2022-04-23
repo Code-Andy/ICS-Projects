@@ -38,20 +38,32 @@
     </div>
 
     <div id="questionPage">
-      <div
-        id="qWrapper"
-        data-tilt
-        data-tilt-max="15"
-        data-tilt-reverse="True"
-        data-tilt-reset="False"
-      >
-        <h1 id="questionText">
-          Have you been facing big changes in regards to your everyday life (ex.
-          new school)?
-        </h1>
-        <div>
-          <h2 id="yes">Yes</h2>
-          <h2 id="no">No</h2>
+      <div id="hoverContainer">
+        <div id="hoverBox">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="tiltWrapper">
+        <div
+          id="qWrapper"
+          data-tilt
+          data-tilt-max="5"
+          data-tilt-reverse="True"
+          data-tilt-reset="False"
+          data-tilt-axis="x"
+          data-tilt-mouse-event-element="#tiltWrapper"
+          data-tilt-transition="True"
+          data-tilt-easing="cubic-bezier(.03,.98,.52,.99)"
+        >
+          <h1 id="questionText">
+            Have you been facing big changes in regards to your everyday life
+            (ex. new school)?
+          </h1>
+          <div>
+            <h2 id="yes">Yes</h2>
+            <h2 id="no">No</h2>
+          </div>
         </div>
       </div>
     </div>
