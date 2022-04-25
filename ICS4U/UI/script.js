@@ -49,21 +49,3 @@
 //   lastActive = activePage;
 //   activePage = "homePage";
 // }
-
-document.getElementById("yesHover").addEventListener("mouseover", yesActive);
-function yesActive() {
-  document.getElementById("yes").style.color = "#ffffff";
-}
-document.getElementById("yesHover").addEventListener("mouseout", yesInactive);
-function yesInactive() {
-  document.getElementById("yes").style.color = "#000000";
-}
-
-document.getElementById("noHover").addEventListener("mouseover", noActive);
-function noActive() {
-  document.getElementById("no").style.color = "#ffffff";
-}
-document.getElementById("noHover").addEventListener("mouseout", noInactive);
-function noInactive() {
-  document.getElementById("no").style.color = "#000000";
-}

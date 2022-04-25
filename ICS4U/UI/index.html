@@ -38,29 +38,24 @@
     </div>
     <div id="questionPage">
       <div id="tiltWrapper">
-        <div
-          id="qWrapper"
-          data-tilt
-          data-tilt-max="5"
-          data-tilt-reverse="True"
-          data-tilt-reset="False"
-          data-tilt-axis="x"
-          data-tilt-mouse-event-element="#tiltWrapper"
-          data-tilt-transition="True"
-          data-tilt-easing="cubic-bezier(.03,.98,.52,.99)"
-        >
-          <h1 id="questionText">
+        <div id="qWrapper">
+          <h1
+            id="questionText"
+            data-tilt
+            data-tilt-max="3"
+            data-tilt-reverse="True"
+            data-tilt-reset="False"
+            data-tilt-mouse-event-element="#questionPage"
+            data-tilt-transition="True"
+            data-tilt-easing="cubic-bezier(.03,.98,.52,.99)"
+          >
             Have you been facing big changes in regards to your everyday life
             (ex. new school)?
           </h1>
           <div>
-            <h2 id="yes">Yes</h2>
-            <h2 id="no">No</h2>
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
           </div>
-        </div>
-        <div id="hoverBox">
-          <div id="yesHover"></div>
-          <div id="noHover"></div>
         </div>
       </div>
     </div>

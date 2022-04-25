@@ -1,3 +1,9 @@
+/* 
+current vh vw does not work on vertical devices 
+
+use rem or em maybe?
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -92,19 +98,6 @@ html {
   flex-direction: column;
 }
 
-#hoverBox {
-  position: absolute;
-  height: 50vh;
-  width: 70vw;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#hoverBox div {
-  width: 35vw;
-}
-
 #tiltWrapper {
   height: 50vh;
   width: 70vw;
@@ -131,6 +124,28 @@ html {
 #qWrapper h1 {
   text-align: center;
   padding-bottom: 3vh;
+}
+
+#qWrapper button {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  border-radius: 1vw;
+  border: 0px solid rgba(255, 255, 255, 0.18);
+  padding: 1vh;
+  width: 7vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-size: 3vh;
+  transition: all 0.4s ease 0s;
+}
+
+#qWrapper button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 .topnav {
@@ -161,6 +176,7 @@ html {
 
 #ourProject p:hover {
   color: #3a3a3a;
+  cursor: pointer;
 }
 
 #dotLogo {
@@ -172,6 +188,7 @@ html {
 
 #dotLogo:hover {
   filter: hue-rotate(90deg);
+  cursor: pointer;
 }
 
 img {
