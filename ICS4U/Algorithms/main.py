@@ -6,8 +6,11 @@ from insertionSort import insertionSort
 from linearSearch import linearSearch
 from binarySearch import binarySearch
 
+# Imports of algorithms and timeit function to measure time usage
 
 sizeLists = [5, 10, 100, 1000, 10000, 30000, 50000, 75000]
+
+# Object size list we're evaluating
 
 
 def runTimes(objectSize):
@@ -48,6 +51,8 @@ def runTimes(objectSize):
     linearTimesSorted = linearTimesSorted[1:]
     binaryTimes = binaryTimes[1:]
 
+    # Removing first comma from runtime strings
+
     f.write(f"{objectSize} objects\n")
     f.write(f"{insertionTimes}\n")
     f.write(f"{linearTimesUnsorted}\n")
@@ -55,12 +60,15 @@ def runTimes(objectSize):
     f.write(f"{binaryTimes}\n")
     f.write("\n")
 
+    # Saving runtimes to text file
 
-with open('times2.txt', 'w') as f:
+
+with open('newtimes.txt', 'w') as f:
     for items in sizeLists:
         print(items)
         runTimes(items)
 
+# Runtimes graphs via google sheets : https://docs.google.com/spreadsheets/d/1Yb1b97q9YA2JUf0KuyzPd3IADyBdS2xNJmZLbSoA6BI/edit?usp=sharing
 
 # Demo of working sorts and printing first and last 20 elements in insertionSort()
 

@@ -10,5 +10,5 @@ def binarySearch(arr, target):
         elif arr[mid].x > target:
             high = mid - 1
         else:
-            return(True)
-    return(False)
+            return True
+    return False
