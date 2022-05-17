@@ -1,0 +1,82 @@
+{
+  "q1": {
+    "text": "Do you care a lot about the way people around you view you?",
+    "values": [0, 0, 5, 1]
+  },
+  "q2": {
+    "text": "Do you feel like you are always under a lot of pressure from your parents?",
+    "values": [7, 2, 3, 0]
+  },
+  "q3": {
+    "text": "Do you feel like you put yourself under a lot of pressure?",
+    "values": [7, 2, 3, 0]
+  },
+  "q4": {
+    "text": "Do you compare your success and achievements to others around you?",
+    "values": [4, 0, 1, 4]
+  },
+  "q5": {
+    "text": "Do you have overwhelming family responsibilities?",
+    "values": [5, 1, 5, 0]
+  },
+  "q6": {
+    "text": "Do you have a weak friendship with your peers?",
+    "values": [0, 5, 5, 0]
+  },
+  "q7": {
+    "text": "Do you often spend most of your free time alone?",
+    "values": [0, 3, 6, 2]
+  },
+  "q8": {
+    "text": "Have you seen a therapist or talked to a guardian about any mental health issues?",
+    "values": [3, 3, 3, 3]
+  },
+  "q9": {
+    "text": "Do you create ambitious goals for yourself in regards to education or work?",
+    "values": [1, 0, 0, 0]
+  },
+  "q10": {
+    "text": "Do you spend more time at work or studying than you do spending with family and friends?",
+    "values": [6, 3, 2, 0]
+  },
+  "q11": {
+    "text": "Have you been facing big changes in your family? ",
+    "values": [3, 5, 2, 0]
+  },
+  "q12": {
+    "text": "Have you been facing big changes in regards to your everyday life (ex. new school)?",
+    "values": [2, 2, 0, 2]
+  },
+  "q13": {
+    "text": "Do you often regret the decisions you make and look back at what could be done better? ",
+    "values": [0, 0, 5, 8]
+  },
+  "q14": {
+    "text": "Do you dislike trying new things and getting out of your comfort zone?",
+    "values": [2, 2, 4, 2]
+  },
+  "q15": {
+    "text": "Do you like to look at the negative sides of things when facing issues in your everyday life? ",
+    "values": [0, 2, 2, 9]
+  },
+  "q16": {
+    "text": "When faced with severe adversity, do you often back down easily?",
+    "values": [0, 1, 2, 6]
+  },
+  "q17": {
+    "text": "Do you despise going to school or work?",
+    "values": [4, 5, 5, 6]
+  },
+  "q18": {
+    "text": "Your friends and family don’t support you when it comes to achieving goals in regards to post-secondary education (yes they don’t support me; no they do support me)?",
+    "values": [6, 3, 4, 0]
+  },
+  "q19": {
+    "text": "Do you or your family members set high standards for you and your achievements?",
+    "values": [7, 1, 2, 0]
+  },
+  "q20": {
+    "text": "Do you dislike the life you live?",
+    "values": [2, 5, 4, 7]
+  }
+}

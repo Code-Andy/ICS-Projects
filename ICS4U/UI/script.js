@@ -49,3 +49,19 @@
 //   lastActive = activePage;
 //   activePage = "homePage";
 // }
+
+fetch("./questions.json")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
+
+document.getElementById("yes").addEventListener("click", yesClick);
+
+let questionNumber = 1;
+
+function yesClick() {
+  questionNumber += 1;
+  console.log(questionNumber);
+}
+
+document.getElementById("questionText").innerHTML = "q" + questionNumber;
