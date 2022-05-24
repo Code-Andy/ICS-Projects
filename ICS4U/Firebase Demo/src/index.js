@@ -3,7 +3,7 @@
  * @author Andy Zhang, Vinesh, Ammar
  */
 
-// Import functions from Google's Firebase
+// Import functions from Google's Firebase jhkjhkjhkj
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
