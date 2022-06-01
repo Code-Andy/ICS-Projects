@@ -17,6 +17,7 @@
 *.vsix
 
 node_modules
+.vscode
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
