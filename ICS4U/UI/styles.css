@@ -93,9 +93,16 @@ html {
   height: 100%;
   width: 100%;
   /* border: 2px dashed #f69c55; */
-  display: flex;
+  display: none;
   justify-content: center;
   flex-direction: column;
+}
+
+#heatMap {
+  display: none;
+  height: 500px;
+  width: 500px;
+  margin: auto;
 }
 
 #tiltWrapper {
